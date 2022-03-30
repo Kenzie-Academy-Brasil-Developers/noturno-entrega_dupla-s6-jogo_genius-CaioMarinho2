@@ -31,19 +31,25 @@ meio.appendChild(textomeio)
 //TESTE
 
 
-const removerChild = function(parent,child){
+function removerChild(parent,child){
     parent.removerChild(child)
 }
 
-/* const alterarTexto = function(parent,child,txt){
-    parent.removeChild(child)
+ function alterarTexto(parent,filho,txt){
+    parent.removeChild(filho)
     const child = document.createElement('p')
     child.innerText= txt
     parent.appendChild(child)
-} */
+ }
 
 
 const botaoIniciar = document.createElement('button')
+
+
+
+botaoIniciar.addEventListener('click', function() {
+    iniciar()
+})
 meio.appendChild(botaoIniciar)
 
 maiorPontuacao = 0
@@ -52,7 +58,7 @@ function iniciar() {
     meio.removeChild(botaoIniciar)
 
     //Textos iniciais apagando e reescrevendo
-    setTimeout(alterarTexto,1000,'meio','textomeio',"Prepare-se e boa sorte")
+    setTimeout(alterarTexto(meio,textomeio,"Prepare-se e boa sorte"),1000,)
     
 
     
@@ -85,6 +91,7 @@ function iniciar() {
     // aparecer botão recomeçar
     
     
+    
 
 
     
@@ -94,4 +101,3 @@ function iniciar() {
 
 }
 
-botaoIniciar.addEventlistener('click', iniciar)
