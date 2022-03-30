@@ -13,42 +13,50 @@ section{
 }
 
 .topButtons{
-    height: 100px;
-    width: 200px;
+    height: 250px;
+    width: 350px;
     border: none;
-    margin-left: 5px;
+    margin-left: 8px;
+    
     
 }
 
 #meio{
     background-color: #7EFED3;
     border-radius:100% ; 
-    width: 400px;
-    height: 400px;
+    width: 330px;
+    height: 330px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 .botonButtons{
-    height: 100px;
-    width: 200px;
+    height: 250px;
+    width: 350px;
     border: none;
-    margin-left: 5px;
- 
+    margin-left: 8px;
+    margin-top: 8px;
 }
 
 #greenButton{
     background-color: #00B200;
+    
+    border-top-left-radius: 100%;
 }
 
 #redButton{
     background-color: #B20000;
+    border-top-right-radius: 100%;
 }
 
 #yellowButton{
     background-color: #B2B000;
+    border-bottom-left-radius: 100%;
 }
 
 #blueButton{
     background-color: #0000B1;
+    border-bottom-right-radius: 100%;
+
 }
