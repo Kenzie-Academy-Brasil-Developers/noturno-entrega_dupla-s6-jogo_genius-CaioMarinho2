@@ -1,3 +1,11 @@
+body{
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    margin :0;
+}
+header{
+    background-color:rgb(192, 180, 180);
+}
 h1{
    color:#423D39 ;
    font-family: 'M PLUS 1 Code', sans-serif;
@@ -29,6 +37,37 @@ section{
     justify-content: center;
     align-items: center;
     position:absolute;
+    flex-direction: column;
+    font-weight: 600;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size:25px;
+    z-index: 1;
+}
+.textoDoFinal{
+    font-size: 15px;
+    margin-right: 120px;
+    
+}
+#sequenciaErrada{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+.classeBotao{
+    background-color:rgb(143, 140, 3) ;
+    border: none;
+    width: 130px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+   
+}
+#botaoRecomeçar{
+    margin-bottom: 60px;
+}
+.classeBotao:hover{
+    background-color:#02C901;
+    cursor: pointer; 
 }
 .botonButtons{
     height: 250px;
@@ -42,49 +81,58 @@ section{
 
 #greenButton{
     background-color: #00B200;
+    transition: 0.5s;
     border-top-left-radius: 100%;
     
 }
 
 #greenButtonSelect{
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.5s;
     filter: blur(4px);
     background-color:#02DA01 ;
+    border-top-left-radius: 100%;
 }
 #redButtonSelect{
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.5s;
     filter: blur(4px);
     background-color:#FA0000;
+    border-top-right-radius: 100%;
 }
 
 #yellowButtonSelect{
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.5s;
     filter: blur(4px);
     background-color:#F8F400 ;
-    ;
+    border-bottom-left-radius: 100%;
+    
 }
 #blueButtonSelect{
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.5s;
     filter: blur(4px);
     background-color:#0303f3;
+    border-bottom-right-radius: 100%;
+    
 }
 #redButton{
     background-color: #B20000;
     border-top-right-radius: 100%;
+    transition: 0.5s;
 }
 
 #yellowButton{
     background-color: #B2B000;
     border-bottom-left-radius: 100%;
+    transition: 0.5s;
    
 }
 
 #blueButton{
     background-color: #0000B1;
     border-bottom-right-radius: 100%;
+    transition: 0.5s;
 
 }
