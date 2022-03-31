@@ -52,7 +52,29 @@ botaoIniciar.addEventListener('click', function() {
 })
 meio.appendChild(botaoIniciar)
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// funções do mecanismo de trocar ID
+function padronizarId (numeroBotao){
+    if(numeroBotao === 1){botaoVerde.id= 'greenButton'}
+    if(numeroBotao === 2){botaoVermelho.id= 'redButton'}
+    if(numeroBotao === 3){botaoAmarelo.id= 'yellowButton'}
+    if(numeroBotao === 4){botaoAzul.id= 'blueButton'}
+}
 
+function analisarSelecionarId (numeroBotao){
+        if(numeroBotao === 1){  botaoVerde.id= 'greenButtonSelect'}
+        if(numeroBotao === 2){  botaoVermelho.id= 'redButtonSelect'}
+        if(numeroBotao === 3){  botaoAmarelo.id= 'yellowButtonSelect'}
+        if(numeroBotao === 4){  botaoAzul.id= 'blueButtonSelect'} 
+    }
+
+function clicaMudarId(numeroBotao){
+    botaoVerde.addEventListener('click',analisarSelecionarId(numeroBotao))
+    botaoVermelho.addEventListener('click',analisarSelecionarId(numeroBotao))
+    botaoAmarelo.addEventListener('click',analisarSelecionarId(numeroBotao))
+    botaoAzul.addEventListener('click',analisarSelecionarId(numeroBotao))
+} 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 function botoes(){
@@ -60,6 +82,8 @@ function botoes(){
     }
 
 maiorPontuacao = 0
+
+//Inicio do jogo
  function iniciar() {
     //esconder botaoIniciar
     meio.removeChild(botaoIniciar)
@@ -75,7 +99,7 @@ maiorPontuacao = 0
     
     
     //txt pedindo atenção aos botões ascendendo
-    /*
+    
     setTimeout(()=>{
         alterarInserirTexto(meio,textomeio,"Preste atenção na sequência")
     },5000)
@@ -85,34 +109,37 @@ maiorPontuacao = 0
     numeroAleatorio = 0
     
     //jogo começa de fato
-    
-        
-    //utilizar um número em cada botão, quando número daquele botão aparecer ele deverá ascender
-    let numeroAleatorio = botoes();
+    //utilizar um número em cada botão, quando um número daquele botão aparecer ele deverá ascender
+    numeroAleatorio = botoes();
     valores.push(numeroAleatorio);
     
-    for(let indice = 0; indice = valores.length; indice++){
-        
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //iniciar sequencia dos botões ascendendo todos dentro do array
-        /* if(n === 1){  botaoVerde.id= 'greenButton:hover'  }
-        if(n === 2){  botaoVerde.id= 'botaoVermelho.id= 'redButton:hover' }
-        if(n === 3){  botaoVerde.id= botaoVerde.className= 'topButtons:hover'  }
-        if(n === 4){  botaoVerde.id= botaoVermelho.className= 'topButtons:hover'  } 
+        for(let repeticao2=0; repeticao2 < valores.length; repeticao2++){
+            setTimeout(()=>{
+                analisarSelecionarId(valores[indice1])},5000)
+            
+            setTimeout(()=> {
+                padronizarId(valores[indice1])},5000)
+        }
 
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //aparecer txt 'Sua vez! Repita a sequência na ordem correta!'
         setTimeout(()=>{
             alterarInserirTexto(meio,textomeio,"Sua vez! Repita a sequência na ordem correta!")
         },5000)
 
-        
-        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //clicar e alterar cor e tamanho baseado no valor passado
+        for(let repeticao3=0; repeticao3 < valores.length; repeticao3++){
+            setTimeout(()=>{
+                clicaMudarId(valores[repeticao3])},5000)
+
+            setTimeout(()=> {
+                padronizarId(valores[indice1])},5000)
+        }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////        
         //aumentar pontuação a cada acerto 
         if(placar > maiorPontuacao){maiorPontuacao = placar}
 
@@ -121,7 +148,7 @@ maiorPontuacao = 0
         //caso o número do botao clicado seja o mesmo do último ítem valores -> adicionar novo número aleatório em valores
             valores.push(numeroAleatorio)
         
-    }
+
     
     //jogo finaliza
 
@@ -155,7 +182,7 @@ maiorPontuacao = 0
     
 
 
-    */
+   
 
     
     
