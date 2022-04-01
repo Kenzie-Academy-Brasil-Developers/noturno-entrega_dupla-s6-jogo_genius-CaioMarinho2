@@ -85,60 +85,40 @@ function botoes(){
 maiorPontuacao = 0
 
 //Inicio do jogo
- function iniciar(churros) {
-console.log(churros)
-    
-    
-     
+    let placar = 0
+    let valores= []
+    let numeroAleatorio = 0
+
+
+ function iniciar() {
     //esconder botaoIniciar
     meio.removeChild(botaoIniciar)
-
     //Textos iniciais apagando e reescrevendo
-    setTimeout( ()=> textoMeio.innerText = 'Prepare-se e boa sorte',1500)
-    
-    
+    setTimeout( ()=> {textoMeio.innerText = 'Prepare-se e boa sorte'},1500)
     //txt pedindo atenção aos botões ascendendo
-    setTimeout( ()=> textoMeio.innerText = 'Preste atenção na sequência',1500)
-    
-    
-    
-    
-    
-    let placar = 0
-    let valores= [1,2,3,4]
-    let numeroAleatorio = 0
-    
+    setTimeout( ()=> {textoMeio.innerText = 'Preste atenção na sequência'},1500)
     //jogo começa de fato
     //utilizar um número em cada botão, quando um número daquele botão aparecer ele deverá ascender
-   /* numeroAleatorio = botoes();
+    numeroAleatorio = botoes();
     valores.push(numeroAleatorio);
-     */
-   for(let z = 0; z <= 5; z++){
-    
-    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Iniciar sequencia dos botões ascendendo todos dentro do array
     for(let i=0; i < valores.length; i++){
-        
         setTimeout(()=>{piscar(valores[i])},1000*i)
-        /* ( ()=>analisarSelecionarId(valores[i]),2000 ) */
+        ( ()=>analisarSelecionarId(valores[i]),2000 )
+    }
+    //aparecer txt 'Sua vez! Repita a sequência na ordem correta!'
+    setTimeout( ()=> textoMeio.innerText = 'Sua vez! Repita a sequência na ordem correta!',1100*valores.length)
+}   
 
-    }
-        
-    
-    }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //aparecer txt 'Sua vez! Repita a sequência na ordem correta!'
-        setTimeout( ()=> textoMeio.innerText = 'Sua vez! Repita a sequência na ordem correta!',1100*valores.length)
-        
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //clicar e alterar cor e tamanho baseado no valor passado
         let repeticoes = 1
-        /* for(let indice2=0; indice2 < valores.length; indice2++){
+         for(let indice2=0; indice2 < valores.length; indice2++){
             repeticoes +=1
             setTimeout(()=> {piscar(valores[indice2])},500*repeticoes)
-        } */
+        } 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////        
         //aumentar pontuação a cada acerto 
         if(placar > maiorPontuacao){maiorPontuacao = placar}
@@ -187,5 +167,5 @@ console.log(churros)
     
     
     
-}
+
 
