@@ -61,6 +61,7 @@ const superiores= document.getElementById('botõesSuperior')
 const inferiores= document.getElementById('botõesInferiores')
 
 botaoVerde.id= 'greenButton'
+
 botaoVerde.tagName= 1
 botaoVermelho.id= 'redButton'
 botaoVermelho.tagName= 2
@@ -74,6 +75,10 @@ botaoAzul.tagName= 4
 botaoAmarelo.className= 'botonButtons'
 botaoAzul.className= 'botonButtons'
 
+botaoVerde.innerText='Verde'
+botaoAzul.innerText='Azul'
+botaoAmarelo.innerText='Amarelo'
+botaoVermelho.innerText='Vermelho'
 
 superiores.appendChild(botaoVerde)
 superiores.appendChild(botaoVermelho)
