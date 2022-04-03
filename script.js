@@ -1,6 +1,7 @@
 
 // Variaveis  
     let valores= []
+    let clicadosVazio= []
     let numeroAleatorio = criarNumeroAleatório()
     let maiorPontuacao = 0
     let placar = 0
@@ -37,6 +38,19 @@ function piscar (numeroBotao){
         padronizarId(numeroBotao)},1600)
 }
 
+function piscarValores (){
+    valores.forEach(element => {
+        piscar(valores[index])
+    });
+}
+
+function piscarComClick (numeroBotao){
+    setTimeout(()=>{
+        analisarSelecionarId(numeroBotao)},10);
+
+    setTimeout(()=> {
+        padronizarId(numeroBotao)},400)
+}
 
 function clicaMudarId(numeroBotao){
     botaoVerde.addEventListener('click',analisarSelecionarId(numeroBotao))
@@ -61,17 +75,16 @@ const superiores= document.getElementById('botõesSuperior')
 const inferiores= document.getElementById('botõesInferiores')
 
 botaoVerde.id= 'greenButton'
-
-botaoVerde.tagName= 1
+botaoVerde.name= 1
 botaoVermelho.id= 'redButton'
-botaoVermelho.tagName= 2
+botaoVermelho.name= 2
 botaoVerde.className= 'topButtons'
 botaoVermelho.className= 'topButtons'
 
 botaoAmarelo.id= 'yellowButton'
-botaoAmarelo.tagName= 3
+botaoAmarelo.name= 3
 botaoAzul.id= 'blueButton'
-botaoAzul.tagName= 4
+botaoAzul.name= 4
 botaoAmarelo.className= 'botonButtons'
 botaoAzul.className= 'botonButtons'
 
@@ -97,106 +110,106 @@ botaoIniciar.innerText= 'Iniciar'
 botaoIniciar.id = "idBotaoIniciar"
 botaoIniciar.className = 'classeBotao'
 botaoIniciar.addEventListener('click', iniciar)
+/* botaoIniciar.addEventListener('click', setTimeout(()=> {meio.removeChild(botaoIniciar)},10)) */
+        /*  ()=>{/* esconder botaoIniciar } */
 meio.appendChild(botaoIniciar)
 
 ////////////Inicio do jogo//////////
  function iniciar() {
-    //esconder botaoIniciar
-    meio.removeChild(botaoIniciar)
-    //Textos iniciais apagando e reescrevendo
-    setTimeout( ()=> {textoMeio.innerText = 'Prepare-se e boa sorte'},1900)
-    //txt pedindo atenção aos botões ascendendo
-    setTimeout( ()=> {textoMeio.innerText = 'Preste atenção na sequência'},3900)
-    //jogo começa de fato
-    //utilizar um número em cada botão, quando um número daquele botão aparecer ele deverá ascender
-    
-    //Iniciar sequencia dos botões ascendendo todos dentro do array
-    setTimeout(()=> PiscaRepetidor(),4100)
-    function PiscaRepetidor(){
-        for(let i=0; i < valores.length; i++){
-            setTimeout(()=>{piscar(valores[i])},1000*i)
-            ( ()=>analisarSelecionarId(valores[i]),2000 )
-        }
-    }
-    //aparecer txt 'Sua vez! Repita a sequência na ordem correta!'
-     setTimeout( ()=>{interacaoMeioDoJogo()} ,5200+1100*valores.length)
-}   
-
-function interacaoMeioDoJogo() {
-    const repitaSequencia=document.createElement('p')
-    const ordemCorreta= document.createElement('p')
-
-    textoMeio.innerText = 'Sua vez!'
-    repitaSequencia.innerText='Repita a sequência na'
-    ordemCorreta.innerText='ordem correta!'
-    repitaSequencia.className= 'frasemeio'
-    ordemCorreta.className='frasemeio'
-
-
-    meio.appendChild(repitaSequencia)
-    meio.appendChild(ordemCorreta)
     
     
-
-
-
-    
-    //Adicionar Função de botoes coloridos clicaveis
-    //colocar um for aqui baseado em valores para funcionar com os botoes
-    /*
-    let contador1 = 1
-    for(let c = 0; c < contador1; c++){
-
-        
-
-        document.addEventListener('click',function (e){
-
-        //piscar quando clicar
-        if(e.target.name === botaoVerde){ piscar(1)}
-        if(e.target.name === botaoVermelho){ piscar(2)}
-        if(e.target.name === botaoAmarelo){ piscar(3)}
-        if(e.target.name === botaoAzul){ piscar(4)}
-        
-        if(//Verificar se o botão clicado está na posição valores[c]
-            e.target.tagName === valores[c]){ 
-                // se clicado nos botões corretos aumenta placar
-                plcar+=1}
-
-        //////////////se o botão clicado for o mesmo que valores[i] então contador1+=1 caso contrario parar código e ir para final()///////
-        if(e.target.tagName === valores[i]){ 
-                contador1+=1
-            
-            }else{final()}
-        
-    }
+     //Textos iniciais apagando e reescrevendo
+     setTimeout( ()=> {textoMeio.innerText = 'Prepare-se e boa sorte'},1900)
+     //txt pedindo atenção aos botões ascendendo
+     setTimeout( ()=> {textoMeio.innerText = 'Preste atenção na sequência'},3900)
+     //jogo começa de fato
+     //utilizar um número em cada botão, quando um número daquele botão aparecer ele deverá ascender
      
-    }) 
+     //Iniciar sequencia dos botões ascendendo todos dentro do array
+     setTimeout(()=> PiscaRepetidor(),4100)
+     function PiscaRepetidor(){
+         for(let i=0; i < valores.length; i++){
+             setTimeout(()=>{piscar(valores[i])},1000*i)
+             /*  ( ()=>analisarSelecionarId(valores[i]),2000 ) */
+            }
+        }
+        // excluir o que existe no meio
+        /* setTimeout( ()=> {meio.removeChild(textoMeio)},5700) */
+        //aparecer txt 'Sua vez! Repita a sequência na ordem correta!'
+        setTimeout( ()=>{interacaoMeioDoJogo()} ,4800+1100*valores.length)
+
+    }   
     
-
-
-
-    ///////////////caso o array criado com todos os botões iniciados seja igual ao array valores adicione no número aleatório a valores////////////////
-
-        if(botoesClicados === valores // Talvez tenha que dar split para tirar de array e transformar em string sendo que só assim a comparação dará certo){
-        //novos numeros aleatórios
-            numeroAleatorio = criarNumeroAleatório()
+     
+    
+    function interacaoMeioDoJogo() {
+        
+        let clicados = []
+        const repitaSequencia=document.createElement('p')
+        const ordemCorreta= document.createElement('p')
+        
+        textoMeio.innerText = 'Sua vez!'
+        repitaSequencia.innerText='Repita a sequência na'
+        ordemCorreta.innerText='ordem correta!'
+        repitaSequencia.className= 'frasemeio'
+        ordemCorreta.className='frasemeio'
+        
+        
+        meio.appendChild(repitaSequencia)
+        meio.appendChild(ordemCorreta)
+        
+        
+        
+        
+        
+        
+        //Adicionar Função de botoes coloridos clicaveis
+        //colocar um for aqui baseado em valores para funcionar com os botoes
+        
+        let contador1 = 1
+        for(let c = 0; c < contador1; c++){
+            console.log(valores)
+            
+            const jogo= document.getElementById('jogo')
+            
+            
+            
+            jogo.addEventListener('click',function (e){
+                const convertendo= Number( e.target.name)
+                
+                clicados.push(convertendo)
+                
+                
+                
+            //piscar quando clicar
+            if(e.target === botaoVerde){ piscarComClick(1)}
+            if(e.target=== botaoVermelho){ piscarComClick(2)}
+            if(e.target === botaoAmarelo){ piscarComClick(3)}
+            if(e.target=== botaoAzul){ piscarComClick(4)}
+                
+        if(clicados.length === valores.length && clicados.every((item,index) => item === valores[index])){
+            valores.push(Math.floor(Math.random()*4)+1)   
+            placar+=1
+            if(maiorPontuacao < placar){maiorPontuacao = placar}    
+            meio.innerText= 'Aguarde a próxima sequência!'
+            iniciar();
+                    
+        }if(clicados.length === valores.length && clicados.every((item,index) => item !== valores[index])){
+            final()
+                    
         }
-    //////////////apos terminar o for caso o array criado com todos os botões clicados seja igual ao array valores: mostrar a mensagem "É isso ai! Aguarde a próxima sequência!" e  retorne a função iniciar////////////////////////
-        if(botoesClicados === valores // Talvez tenha que dar split para tirar de array e transformar em string sendo que só assim a comparação dará certo){
-        //novos numeros aleatórios
-            meio.innerText= 'É isso ai! Aguarde a próxima sequência!'
-            setTimeOut(iniciar(),1500)
-        }
-    */
+       
+        
+    })}
+    
     //jogo finaliza
-    // excluir o que existe no meio
-/*     meio.removeChild(textoMeio) */
-}        
+     
+}
     
     
 function final(){
   const frasesMeio= document.getElementsByClassName('frasemeio')
-   meio.removeChild(frasesMeio)
+  /*  meio.removeChild(frasesMeio)  */
     //mostrar texto 'Que pena'
         const txtFinal1=document.createElement('p')
         txtFinal1.innerText='Que pena!'
@@ -228,9 +241,19 @@ function final(){
         botaoRecomecar.id = 'botaoRecomeçar'
         botaoRecomecar.innerText = 'Recomeçar'
         botaoRecomecar.addEventListener('click', ()=>{
-         iniciar()
-         ////////////////////////////////////Colocar a função inicio no final para recomeçar o jogo//////////////////////////////////////////
-         ///////////////////////////////////Zerar todas as variáveis menos maiorPontuacao ///////////////////////////////////////////////////////////
+        ///////////////////////////////////Zerar todas as variáveis menos maiorPontuacao ///////////////////////////////////////////////////////////
+          
+            let valores= [];
+            let clicadosVazio= [];
+            let numeroAleatorio = criarNumeroAleatório();
+            let maiorPontuacao = 0;
+            let placar = 0;
+            valores.push(numeroAleatorio);
+            let botoesClicados = [];
         })
+        botaoRecomecar.addEventListener('click', ()=>{
+         ////////////////////////////////////Colocar a função inicio no final para recomeçar o jogo//////////////////////////////////////////
+         iniciar})
+        
         meio.appendChild(botaoRecomecar)
 }
