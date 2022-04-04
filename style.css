@@ -42,23 +42,9 @@ section{
     align-items: center;
 }
 
-.topButtons{
-    height: 285px;
-    width: 335px;
-    border: none;
-    margin-left: 8px;
-    
-}
 
-.botonButtons{
-    height: 285px;
-    width: 335px;
-    border: none;
-    margin-left: 8px;
-    margin-top:8px;
-    
-    
-}
+
+
 #meio{
     background-color: #7EFED3;
     border-radius:100% ; 
@@ -122,6 +108,11 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
 }
 #redButtonSelect{
     transform: scale(1.1);
@@ -136,6 +127,11 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
 }
 
 #yellowButtonSelect{
@@ -151,6 +147,13 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
+    margin-top:8px;
+    
 }
 #blueButtonSelect{
     transform: scale(1.1);
@@ -165,6 +168,13 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;  
+    font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
+    margin-top:8px;
+    
 }
 #greenButton{
     background-color: #00B200;
@@ -177,6 +187,10 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
     
     
 }
@@ -191,6 +205,10 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
 }
 
 #yellowButton{
@@ -204,6 +222,12 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
     font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
+    margin-top:8px;
+    
 }
 
 #blueButton{
@@ -217,4 +241,10 @@ section{
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
       font-size: 22px;
+      height: 285px;
+      width: 335px;
+      border: none;
+      margin-left: 8px;
+      margin-top:8px;
+      
 }
