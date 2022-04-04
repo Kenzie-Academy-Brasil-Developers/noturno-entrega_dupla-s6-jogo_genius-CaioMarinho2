@@ -1,42 +1,46 @@
+body {
+    background-color: black;
+}
 
-body{
-    background-color: black;  
-}
-h1{
+h1 {
     font-size: 70px;
-   color:#fffbfb ;
-   font-family: 'Inter', sans-serif;
-   font-family: 'M PLUS 1 Code', sans-serif;
-   font-family: 'Monoton', cursive;
-   font-family: 'Press Start 2P', cursive;
-   font-family: 'Righteous', cursive;
-   font-family: 'Staatliches', cursive;
-   display: flex;
-   justify-content: center;
-   margin: 0;
+    color: #fffbfb;
+    font-family: 'Inter', sans-serif;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-family: 'Monoton', cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Righteous', cursive;
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
-summary{
+
+summary {
     font-size: 35px;
-    color:#fffbfb ;
+    color: #fffbfb;
     font-family: 'Inter', sans-serif;
     margin-top: 50px;
-   text-align: center;
+    text-align: center;
 }
-#regras{
+
+#regras {
     margin-top: 35px;
     width: 1500px;
-    color:#fffbfb ;
+    color: #fffbfb;
     font-size: 20px;
     font-family: 'Courier Prime', monospace;
     font-family: 'Inter', sans-serif;
-   
+
 }
-#comojogar{
+
+#comojogar {
     margin: 0;
 }
-section{
+
+section {
     display: flex;
- justify-content: center;
+    justify-content: center;
     margin-top: 100px;
     flex-direction: column;
     align-items: center;
@@ -45,61 +49,68 @@ section{
 
 
 
-#meio{
+#meio {
     background-color: #7EFED3;
-    border-radius:100% ; 
+    border-radius: 100%;
     width: 365px;
     height: 365px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
+    position: absolute;
     flex-flow: column;
     font-weight: 600;
     font-family: 'M PLUS 1 Code', sans-serif;
-    font-size:25px;
+    font-size: 25px;
     z-index: 1;
-  
+
 }
-.frasemeio{
+
+.frasemeio {
     margin: 0;
 }
-.textodomeio{
+
+.textodomeio {
     margin-bottom: 10px;
 }
-.textoDoFinal{
+
+.textoDoFinal {
     font-size: 15px;
     margin-right: 120px;
-    
+
 }
-#sequenciaErrada{
+
+#sequenciaErrada {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
 }
-.classeBotao{
-    background-color:rgb(143, 140, 3) ;
+
+.classeBotao {
+    background-color: rgb(143, 140, 3);
     border: none;
     width: 130px;
     height: 30px;
     font-size: 15px;
     font-weight: bold;
-   
+
 }
-#botaoRecomeçar{
+
+#botaoRecomeçar {
     margin-bottom: 60px;
 }
-.classeBotao:hover{
-    background-color:#02C901;
-    cursor: pointer; 
+
+.classeBotao:hover {
+    background-color: #02C901;
+    cursor: pointer;
 }
 
 
-#greenButtonSelect{
+#greenButtonSelect {
     transform: scale(1.1);
     transition: 0.1s;
     filter: blur(1px);
-    background-color:#02DA01 ;
+    background-color: #02DA01;
     border-top-left-radius: 100%;
     font-family: 'Inter', sans-serif;
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -114,11 +125,12 @@ section{
     border: none;
     margin-left: 8px;
 }
-#redButtonSelect{
+
+#redButtonSelect {
     transform: scale(1.1);
     transition: 0.1s;
     filter: blur(1px);
-    background-color:#FA0000;
+    background-color: #FA0000;
     border-top-right-radius: 100%;
     font-family: 'Inter', sans-serif;
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -134,11 +146,11 @@ section{
     margin-left: 8px;
 }
 
-#yellowButtonSelect{
+#yellowButtonSelect {
     transform: scale(1.1);
     transition: 0.1s;
     filter: blur(1px);
-    background-color:#F8F400 ;
+    background-color: #F8F400;
     border-bottom-left-radius: 100%;
     font-family: 'Inter', sans-serif;
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -152,14 +164,15 @@ section{
     width: 335px;
     border: none;
     margin-left: 8px;
-    margin-top:8px;
-    
+    margin-top: 8px;
+
 }
-#blueButtonSelect{
+
+#blueButtonSelect {
     transform: scale(1.1);
     transition: 0.1s;
     filter: blur(1px);
-    background-color:#0303f3;
+    background-color: #0303f3;
     border-bottom-right-radius: 100%;
     font-family: 'Inter', sans-serif;
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -167,16 +180,17 @@ section{
     font-family: 'Press Start 2P', cursive;
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
-    font-size: 22px;  
+    font-size: 22px;
     font-size: 22px;
     height: 285px;
     width: 335px;
     border: none;
     margin-left: 8px;
-    margin-top:8px;
-    
+    margin-top: 8px;
+
 }
-#greenButton{
+
+#greenButton {
     background-color: #00B200;
     transition: 0.2s;
     border-top-left-radius: 100%;
@@ -191,10 +205,11 @@ section{
     width: 335px;
     border: none;
     margin-left: 8px;
-    
-    
+
+
 }
-#redButton{
+
+#redButton {
     background-color: #B20000;
     border-top-right-radius: 100%;
     transition: 0.2s;
@@ -211,7 +226,7 @@ section{
     margin-left: 8px;
 }
 
-#yellowButton{
+#yellowButton {
     background-color: #B2B000;
     border-bottom-left-radius: 100%;
     transition: 0.2s;
@@ -226,11 +241,11 @@ section{
     width: 335px;
     border: none;
     margin-left: 8px;
-    margin-top:8px;
-    
+    margin-top: 8px;
+
 }
 
-#blueButton{
+#blueButton {
     background-color: #0000B1;
     border-bottom-right-radius: 100%;
     transition: 0.2s;
@@ -240,11 +255,11 @@ section{
     font-family: 'Press Start 2P', cursive;
     font-family: 'Righteous', cursive;
     font-family: 'Staatliches', cursive;
-      font-size: 22px;
-      height: 285px;
-      width: 335px;
-      border: none;
-      margin-left: 8px;
-      margin-top:8px;
-      
+    font-size: 22px;
+    height: 285px;
+    width: 335px;
+    border: none;
+    margin-left: 8px;
+    margin-top: 8px;
+
 }
