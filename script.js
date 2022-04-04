@@ -7,6 +7,7 @@
     let placar = 0
     valores.push(numeroAleatorio);
     let botoesClicados = []
+    
 
 
 /////////Funções de mecanismo////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -137,26 +138,7 @@ meio.appendChild(botaoIniciar)
 
     }   
     
-     
-    
-    function interacaoMeioDoJogo() {
-        
-        
-        const repitaSequencia=document.createElement('p')
-        const ordemCorreta= document.createElement('p')
-        
-        textoMeio.innerText = 'Sua vez!'
-        repitaSequencia.innerText='Repita a sequência na'
-        ordemCorreta.innerText='ordem correta!'
-        repitaSequencia.className= 'frasemeio'
-        ordemCorreta.className='frasemeio'
-        
-        
-        meio.appendChild(repitaSequencia)
-        meio.appendChild(ordemCorreta)
-        const jogo= document.getElementById('jogo')
-            
-            
+    function clicarPontuar(){
         let clicados = []    
         jogo.addEventListener('click',function (e){
             const convertendo= Number( e.target.name)
@@ -183,14 +165,36 @@ meio.appendChild(botaoIniciar)
                 }
                 
         })
+    }
+    
+    function interacaoMeioDoJogo() {
         
+        
+        const repitaSequencia=document.createElement('p')
+        const ordemCorreta= document.createElement('p')
+        
+        textoMeio.innerText = 'Sua vez!'
+        repitaSequencia.innerText='Repita a sequência na'
+        ordemCorreta.innerText='ordem correta!'
+        repitaSequencia.className= 'frasemeio'
+        ordemCorreta.className='frasemeio'
+        
+        
+        meio.appendChild(repitaSequencia)
+        meio.appendChild(ordemCorreta)
+        const jogo= document.getElementById('jogo')
+            
+            
+        
+        clicarPontuar()
     }
              
 
     //jogo finaliza
-
+    
   
 function final(){
+    clicarPontuar.stopPropagation()
     const frasesMeio= document.getElementsByClassName('frasemeio')
     /*  meio.removeChild(frasesMeio)  */
     //mostrar texto 'Que pena'
